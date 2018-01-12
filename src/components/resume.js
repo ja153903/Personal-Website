@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-var ProgressBar = require('progressbar.js');
+const ProgressBar = require('progressbar.js');
 
 class Resume extends Component {
 
@@ -10,20 +10,21 @@ class Resume extends Component {
     }
 
     componentDidMount() {
-        this.createComfortabilityBar('Python', 0.9);
+        this.createComfortabilityBar('Python', 0.9, '#python');
+        this.createComfortabilityBar('JavaScript', 0.8, '#javascript');
     }
 
-    createComfortabilityBar(language, comfortability) {
-        const bar = new ProgressBar.Circle('#example', {
+    createComfortabilityBar(language, comfortability, cssIDSelector) {
+        const bar = new ProgressBar.Circle(cssIDSelector, {
             strokeWidth: 6,
             easing: 'easeInOut',
             duration: 1400,
-            color: '#FFEA82',
+            color: 'black',
             trailColor: '#eee',
             trailWidth: 1,
             svgStyle: null,
-            step: function(state, circle) {
-                circle.setText(language);
+            text: {
+                value: language
             }
         });
 
@@ -34,7 +35,15 @@ class Resume extends Component {
         return (
             <div>
                 <h4>Resume here</h4>
-                <div id="example"></div>
+                <div id="example">
+                    Languages:
+                    <div className="d-inline-block">
+                        <div id="python"></div>
+                    </div>
+                    <div className="d-inline-block">
+                        <div id="javascript"></div>
+                    </div>
+                </div>
             </div>
         )
     }
