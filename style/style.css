@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
-div#python, div#javascript {
-    margin: 200px;
+div#python, div#javascript, div#java, div#cpp{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+div#node-selector, div#react-selector, 
+div#redux-selector, div#flask-selector{
+    margin: 20px;
     width: 200px;
     height: 200px;
 }
