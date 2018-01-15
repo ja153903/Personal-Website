@@ -11,7 +11,6 @@ class Resume extends Component {
     render() {
         return (
             <div>
-                <h4>Resume here</h4>
                 <Skills />
             </div>
         )

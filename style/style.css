@@ -4,15 +4,11 @@
     box-sizing: border-box;
 }
 
-div#python, div#javascript, div#java, div#cpp{
-    margin: 20px;
-    width: 200px;
-    height: 200px;
+div#header-parent {
+    text-align: center;
 }
 
-div#node-selector, div#react-selector, 
-div#redux-selector, div#flask-selector{
-    margin: 20px;
-    width: 200px;
-    height: 200px;
+div#header-links, h1#header-name {
+    width: 50%;
+    margin: 0 auto;
 }

@@ -10,18 +10,22 @@ class SkillMeter extends Component {
     }
 
     componentDidMount() {
-        this.generateSkillMeter(this.props.language, this.props.comfortability, this.props.cssIDSelector);
+        this.generateSkillMeter(this.props.language, this.props.comfortability, this.props.cssIDSelector, this.props.color);
     }
 
-    generateSkillMeter(language, comfortability, cssIDSelector) {
+    generateSkillMeter(language, comfortability, cssIDSelector, color='#3b5998') {
         const bar = new ProgressBar.Circle(`#${cssIDSelector}`, {
             strokeWidth: 6,
             easing: 'easeInOut',
             duration: 1400,
-            color: '#3b5998',
+            color: color,
             trailColor: '#eee',
             trailWidth: 1,
-            svgStyle: null,
+            svgStyle: {
+                margin: '20px',
+                width: '150px',
+                height: '150px'
+            },
             text: {
                 value: language
             }

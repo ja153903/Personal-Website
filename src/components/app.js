@@ -9,7 +9,7 @@ import Blog from './blog.js';
 class App extends Component {
     render() {
       return (
-        <div>
+        <div className="container-fluid">
           <Header />
           <Switch>
             <Route path="/blog" component={Blog}/>
