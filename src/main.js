@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './components/app.js';
 import './../style/style.css';
+import './../style/bootstrap-social.css';
 
 ReactDOM.render(
   <BrowserRouter>

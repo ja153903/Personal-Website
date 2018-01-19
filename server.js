@@ -17,6 +17,7 @@ app.use(webpackDevMiddlware(compiler, {
   }
 }));
 
+// Need this to serve the index.html file for every React component
 app.use('*', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/www/index.html'));
 });
